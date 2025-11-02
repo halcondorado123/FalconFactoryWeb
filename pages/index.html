@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Falcon Factory - Fábrica de software especializada en soluciones tecnológicas innovadoras" />
+  
+  <title>Falcon Software Factory® - Inicio</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/icons/icons8-script-de-cafe.svg" type="image/x-icon" />
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <style>
+    /* Mejoras adicionales para la página de inicio */
+    .hero-image-container {
+      position: relative;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+
+    .feature-icon-box {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .feature-item:hover .feature-icon-box {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 10px 25px rgba(13, 110, 253, 0.4);
+    }
+
+    .stats-section {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stats-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+      line-height: 1;
+    }
+
+    .service-preview-card {
+      border: none;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .service-preview-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: #e7f1ff;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .service-preview-card:hover .service-icon {
+      background: #0d6efd;
+      transform: scale(1.1);
+    }
+
+    .service-preview-card:hover .service-icon i {
+      color: white !important;
+    }
+
+    .client-logo {
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: all 0.3s ease;
+      max-width: 150px;
+      height: auto;
+    }
+
+    .client-logo:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      bottom: -50%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .btn-custom {
+      border-radius: 50px;
+      padding: 12px 32px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .quote-icon {
+      font-size: 3rem;
+      color: #0d6efd;
+      opacity: 0.2;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ========== NAVBAR ========== -->
+  <div id="nav-menu"></div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero-section d-flex align-items-center justify-content-center position-relative mt-5">
+    <div class="overlay-light"></div>
+
+    <div class="container-xxl position-relative py-5 px-4 hero-container">
+      <div class="row align-items-center justify-content-between min-vh-90 gx-5 gy-5">
+        
+        <!-- Texto principal -->
+        <div class="col-lg-6 col-xl-6 text-center text-lg-start">
+          <div class="hero-text pe-lg-4">
+            <h1 class="display-3 fw-bold mb-3 animate-fade-in">
+              <span class="text-gradient-dark">Falcon Software Factory®</span>
+            </h1>
+            
+            <h2 class="fw-semibold mb-4 text-dark">
+              Construimos el <span class="text-primary fw-bold">futuro digital</span>
+            </h2>
+            
+            <p class="lead mb-4 text-dark opacity-85">
+              Creamos soluciones tecnológicas innovadoras, seguras y escalables 
+              para transformar tus ideas en experiencias digitales impactantes.
+            </p>
+            
+            <!-- Características -->
+            <div class="row mb-4 gy-2">
+              <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3 feature-item">
+                  <div class="feature-icon-box me-3">
+                    <i class="fas fa-shield-alt text-white"></i>
+                  </div>
+                  <span class="text-dark fw-semibold">Soluciones Seguras</span>
+                </div>
+                <div class="d-flex align-items-center mb-3 feature-item">
+                  <div class="feature-icon-box me-3">
+                    <i class="fas fa-expand-arrows-alt text-white"></i>
+                  </div>
+                  <span class="text-dark fw-semibold">Tecnología Escalable</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3 feature-item">
+                  <div class="feature-icon-box me-3">
+                    <i class="fas fa-bolt text-white"></i>
+                  </div>
+                  <span class="text-dark fw-semibold">Desarrollo Ágil</span>
+                </div>
+                <div class="d-flex align-items-center mb-3 feature-item">
+                  <div class="feature-icon-box me-3">
+                    <i class="fas fa-users text-white"></i>
+                  </div>
+                  <span class="text-dark fw-semibold">Equipo Especializado</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Botones -->
+            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+              <a href="servicios.html" class="btn btn-primary btn-lg px-4 shadow-lg hover-scale btn-custom">
+                <i class="fas fa-rocket me-2"></i> Nuestros Servicios
+              </a>
+              <a href="contacto.html" class="btn btn-outline-dark btn-lg px-4 hover-glow btn-custom">
+                <i class="fas fa-envelope me-2"></i> Contáctanos
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ilustración mejorada -->
+        <div class="col-lg-6 col-xl-5 text-center">
+          <div class="hero-image-container">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop" 
+                 alt="Equipo de desarrollo" 
+                 class="hero-image">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS SECTION ========== -->
+  <section class="stats-section py-5 position-relative">
+    <div class="container position-relative" style="z-index: 1;">
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-card text-center">
+            <div class="stat-number">50+</div>
+            <p class="text-white mb-0 fw-semibold">Proyectos Exitosos</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-card text-center">
+            <div class="stat-number">15+</div>
+            <p class="text-white mb-0 fw-semibold">Profesionales</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-card text-center">
+            <div class="stat-number">5+</div>
+            <p class="text-white mb-0 fw-semibold">Años de Experiencia</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-card text-center">
+            <div class="stat-number">100%</div>
+            <p class="text-white mb-0 fw-semibold">Satisfacción</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES PREVIEW ========== -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-3">Nuestros Servicios</h2>
+        <p class="text-muted">Soluciones completas para todas tus necesidades tecnológicas</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card service-preview-card shadow-sm p-4">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt fa-3x text-primary"></i>
+            </div>
+            <h4 class="text-center mb-3 fw-bold">Desarrollo Móvil</h4>
+            <p class="text-muted text-center mb-0">
+              Aplicaciones nativas e híbridas para iOS y Android con las últimas tecnologías.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card service-preview-card shadow-sm p-4">
+            <div class="service-icon">
+              <i class="fas fa-laptop-code fa-3x text-primary"></i>
+            </div>
+            <h4 class="text-center mb-3 fw-bold">Desarrollo Web</h4>
+            <p class="text-muted text-center mb-0">
+              Sitios web y aplicaciones web modernas, responsivas y escalables.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card service-preview-card shadow-sm p-4">
+            <div class="service-icon">
+              <i class="fas fa-cloud fa-3x text-primary"></i>
+            </div>
+            <h4 class="text-center mb-3 fw-bold">Cloud & DevOps</h4>
+            <p class="text-muted text-center mb-0">
+              Infraestructura en la nube y automatización de procesos de desarrollo.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="servicios.html" class="btn btn-primary btn-lg btn-custom">
+          Ver Todos los Servicios <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CLIENTS SECTION ========== -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Nuestros Clientes</h2>
+      <p class="text-muted mb-5">
+        Organizaciones que confían en Falcon Factory para potenciar su innovación tecnológica.
+      </p>
+
+      <!-- Clients Carousel -->
+      <div id="clientsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap">
+              <img src="../assets/Img(0).png" class="client-logo img-fluid" alt="Cliente 1">
+              <img src="../assets/Img(1).png" class="client-logo img-fluid" alt="Cliente 2">
+              <img src="../assets/Img(2).png" class="client-logo img-fluid" alt="Cliente 3">
+              <img src="../assets/Img(3).png" class="client-logo img-fluid" alt="Cliente 4">
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap">
+              <img src="../assets/Img(4).png" class="client-logo img-fluid" alt="Cliente 5">
+              <img src="../assets/Img(5).png" class="client-logo img-fluid" alt="Cliente 6">
+              <img src="../assets/Img(6).png" class="client-logo img-fluid" alt="Cliente 7">
+              <img src="../assets/Img(7).png" class="client-logo img-fluid" alt="Cliente 8">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#clientsCarousel" data-bs-slide="prev">
+          <i class="fas fa-chevron-left fa-2x text-primary bg-white rounded-circle p-3 shadow"></i>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        
+        <button class="carousel-control-next" type="button" data-bs-target="#clientsCarousel" data-bs-slide="next">
+          <i class="fas fa-chevron-right fa-2x text-primary bg-white rounded-circle p-3 shadow"></i>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators mt-4">
+          <button type="button" data-bs-target="#clientsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#clientsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS SECTION ========== -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-3">Lo que dicen nuestros clientes</h2>
+        <p class="text-muted">Testimonios reales de quienes confían en nosotros</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="text-muted mb-4">
+              "Falcon Factory transformó completamente nuestra presencia digital. 
+              El equipo es profesional y entregó resultados excepcionales."
+            </p>
+            <div class="d-flex align-items-center">
+              <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" 
+                   style="width: 50px; height: 50px;">
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">María García</h6>
+                <small class="text-muted">CEO, TechStart</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="text-muted mb-4">
+              "Increíble experiencia trabajando con ellos. Entendieron perfectamente 
+              nuestras necesidades y superaron nuestras expectativas."
+            </p>
+            <div class="d-flex align-items-center">
+              <div class="bg-success rounded-circle d-flex align-items-center justify-content-center me-3" 
+                   style="width: 50px; height: 50px;">
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">Carlos Rodríguez</h6>
+                <small class="text-muted">Director, Innovate Co.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="text-muted mb-4">
+              "La mejor decisión fue elegir a Falcon Factory. Su expertise técnico 
+              y compromiso con la calidad son incomparables."
+            </p>
+            <div class="d-flex align-items-center">
+              <div class="bg-info rounded-circle d-flex align-items-center justify-content-center me-3" 
+                   style="width: 50px; height: 50px;">
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">Ana Martínez</h6>
+                <small class="text-muted">Fundadora, Digital Plus</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION ========== -->
+  <section class="cta-section py-5 text-white position-relative">
+    <div class="container text-center position-relative" style="z-index: 1;">
+      <h2 class="mb-4 fw-bold">¿Listo para transformar tu idea en realidad?</h2>
+      <p class="lead mb-4">Hablemos sobre tu proyecto y hagamos algo extraordinario juntos</p>
+      <a href="contacto.html" class="btn btn-light btn-lg btn-custom">
+        <i class="fas fa-comments me-2"></i>Solicitar Cotización
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <div id="footer-container"></div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../script/main.js"></script>
+</body>
+</html>

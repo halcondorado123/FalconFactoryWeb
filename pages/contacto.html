@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ponte en contacto con Falcon Factory - Consultas, colaboraciones y oportunidades" />
+  <title>Contacto - Falcon Factory</title>
+
+  <link rel="shortcut icon" href="./assets/icons/icons8-script-de-cafe.svg" type="image/x-icon" />
+
+  <!-- Bootstrap y estilos base -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <style>
+    /* Estilos mejorados para la página de contacto */
+    .page-header {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      margin-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .contact-card {
+      border: none;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+    }
+
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .contact-item {
+      padding: 1.5rem;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      background: #f8f9fa;
+      margin-bottom: 1rem;
+    }
+
+    .contact-item:hover {
+      background: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transform: translateX(10px);
+    }
+
+    .form-floating > .form-control {
+      border-radius: 10px;
+      border: 2px solid #e9ecef;
+      transition: all 0.3s ease;
+    }
+
+    .form-floating > .form-control:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background: #e7f1ff;
+      color: #0d6efd;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .social-icon:hover {
+      background: #0d6efd;
+      color: white;
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 10px 25px rgba(13, 110, 253, 0.4);
+    }
+
+    .btn-primary {
+      border-radius: 50px;
+      padding: 12px 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(13, 110, 253, 0.4);
+    }
+
+    .info-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #e7f1ff;
+      border-radius: 50px;
+      color: #0d6efd;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .contact-illustration {
+      width: 100%;
+      max-width: 400px;
+      margin: 2rem auto;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .section-title {
+      position: relative;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      border-radius: 2px;
+    }
+
+    .quick-info {
+      background: linear-gradient(135deg, #e7f1ff 0%, #f8f9fa 100%);
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .quick-info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .quick-info-icon {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      color: #0d6efd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div id="nav-menu"></div>
+
+  <!-- Encabezado de Página -->
+  <section class="page-header text-white py-5 position-relative">
+    <div class="container text-center position-relative" style="z-index: 1;">
+      <h1 class="display-5 fw-bold mb-2">Contáctanos</h1>
+      <p class="lead mb-0">Estamos aquí para ayudarte o iniciar una colaboración</p>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto" class="contact-section py-5">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <h2 class="fw-bold mb-3 section-title">Hablemos sobre tu idea o proyecto</h2>
+          <p class="text-muted">Nuestro equipo responderá lo antes posible. Puedes escribirnos directamente o usar el formulario.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Información de contacto -->
+        <div class="col-lg-5">
+          <div class="card contact-card shadow-sm h-100">
+            <div class="card-body p-4">
+              <h4 class="text-primary fw-bold mb-4">
+                <i class="bi bi-info-circle me-2"></i>Información de Contacto
+              </h4>
+
+              <!-- Quick Info -->
+              <div class="quick-info">
+                <div class="quick-info-item">
+                  <div class="quick-info-icon">
+                    <i class="bi bi-clock"></i>
+                  </div>
+                  <div>
+                    <small class="text-muted d-block">Horario de atención</small>
+                    <strong>Lun - Vie: 8:00 AM - 6:00 PM</strong>
+                  </div>
+                </div>
+                <div class="quick-info-item">
+                  <div class="quick-info-icon">
+                    <i class="bi bi-geo-alt"></i>
+                  </div>
+                  <div>
+                    <small class="text-muted d-block">Ubicación</small>
+                    <strong>Bogotá D.C., Colombia</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contacto 1 -->
+              <div class="contact-item">
+                <div class="d-flex align-items-center">
+                  <div class="contact-icon bg-primary text-white me-3">
+                    <i class="bi bi-person-fill"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Jhonattan Halcón Casallas Felipe</h6>
+                    <a href="mailto:falconfelipedeveloper@gmail.com" class="text-muted text-decoration-none d-block small">
+                      <i class="bi bi-envelope me-1"></i>jhonattan.casallas@cun.edu.co
+                    </a>
+                    <a href="tel:+573209585852" class="text-muted text-decoration-none d-block small">
+                      <i class="bi bi-phone me-1"></i>+57 320 958 5852
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contacto 2 -->
+              <div class="contact-item">
+                <div class="d-flex align-items-center">
+                  <div class="contact-icon bg-success text-white me-3">
+                    <i class="bi bi-person-badge-fill"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Juan Sebastian Muñoz Ordoñez</h6>
+                    <a href="mailto:juanmunoz.contacto@example.com" class="text-muted text-decoration-none d-block small">
+                      <i class="bi bi-envelope me-1"></i>juan.munozo@cun.edu.co
+                    </a>
+                    <a href="tel:+573101234567" class="text-muted text-decoration-none d-block small">
+                      <i class="bi bi-phone me-1"></i>+57 315 7673005
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contacto 3 -->
+              <div class="contact-item">
+                <div class="d-flex align-items-center">
+                  <div class="contact-icon bg-info text-white me-3">
+                    <i class="bi bi-building-fill"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Falcon Factory</h6>
+                    <a href="mailto:contacto@falconfactory.com" class="text-muted text-decoration-none d-block small">
+                      <i class="bi bi-envelope me-1"></i>falconfelipedeveloper@gmail.com
+                    </a>
+                    <span class="text-muted d-block small">
+                      <i class="bi bi-geo-alt me-1"></i>Bogotá D.C., Colombia
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="my-4">
+
+              <div class="text-center">
+                <h6 class="fw-bold mb-3">
+                  <i class="bi bi-share me-2"></i>Síguenos en Redes Sociales
+                </h6>
+                <div class="d-flex justify-content-center gap-3">
+                  <a href="https://www.linkedin.com/in/jhonattanhalconcasallasfelipe/" 
+                     class="social-icon" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://github.com/halcondorado123" 
+                     class="social-icon" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="mailto:falconfelipedeveloper@gmail.com" 
+                     class="social-icon"
+                     title="Email">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="col-lg-7">
+          <div class="card contact-card shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center mb-4">
+                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
+                     style="width: 50px; height: 50px;">
+                  <i class="bi bi-chat-dots fa-lg"></i>
+                </div>
+                <div>
+                  <h4 class="text-primary fw-bold mb-0">Envíanos un mensaje</h4>
+                  <small class="text-muted">Respuesta en menos de 24 horas</small>
+                </div>
+              </div>
+
+              <form id="contact-form" class="form-group needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="text" 
+                             name="user_name" 
+                             class="form-control" 
+                             id="nameInput" 
+                             placeholder="Tu Nombre" 
+                             required />
+                      <label for="nameInput">
+                        <i class="bi bi-person me-2"></i>Tu Nombre
+                      </label>
+                      <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="email" 
+                             name="user_email" 
+                             class="form-control" 
+                             id="emailInput" 
+                             placeholder="Tu Email" 
+                             required />
+                      <label for="emailInput">
+                        <i class="bi bi-envelope me-2"></i>Tu Email
+                      </label>
+                      <div class="invalid-feedback">Por favor, ingresa un email válido.</div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea name="message" 
+                                class="form-control" 
+                                id="messageInput" 
+                                placeholder="Tu Mensaje" 
+                                style="height: 150px" 
+                                required></textarea>
+                      <label for="messageInput">
+                        <i class="bi bi-chat-text me-2"></i>Tu Mensaje
+                      </label>
+                      <div class="invalid-feedback">Por favor, escribe tu mensaje.</div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100 py-3" id="submit-button">
+                      <span class="spinner-border spinner-border-sm d-none me-2" role="status" aria-hidden="true"></span>
+                      <span class="button-text">
+                        <i class="bi bi-send me-2"></i>Enviar Mensaje
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Info adicional -->
+              <div class="alert alert-info mt-4 border-0" role="alert" style="background: #e7f1ff; border-radius: 10px;">
+                <i class="bi bi-info-circle me-2"></i>
+                <small>
+                  <strong>Nota:</strong> Todos tus datos están protegidos y solo serán usados para responder tu consulta.
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección adicional: Por qué contactarnos -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="text-center">
+            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                 style="width: 80px; height: 80px;">
+              <i class="fas fa-clock fa-2x text-primary"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Respuesta Rápida</h5>
+            <p class="text-muted mb-0">Respondemos todas las consultas en menos de 24 horas</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center">
+            <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                 style="width: 80px; height: 80px;">
+              <i class="fas fa-shield-alt fa-2x text-success"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Confidencialidad</h5>
+            <p class="text-muted mb-0">Tu información está segura y protegida con nosotros</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center">
+            <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                 style="width: 80px; height: 80px;">
+              <i class="fas fa-headset fa-2x text-info"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Soporte Dedicado</h5>
+            <p class="text-muted mb-0">Un equipo profesional listo para ayudarte</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="../script/main.js"></script>
+  <script src="../script/contact.js"></script>
+</body>
+</html>
