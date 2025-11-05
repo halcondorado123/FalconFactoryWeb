@@ -1,0 +1,57 @@
+    /* Margen superior para el encabezado de la página */
+    .page-header {
+      margin-top: 80px;
+    }
+    
+    /* Estilos para las tarjetas de servicios */
+    .service-card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+     /* Estilos para las tarjetas de servicios - animación */
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+    }
+
+    /* Contenedor de las imagenes*/
+    .service-card-img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    /* Iconos de los servicios */
+    .service-icon {
+      width: 70px;
+      height: 70px;
+      background: #0d6efd;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: -35px auto 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Iconos de los servicios - Color de los iconos */
+    .service-icon i {
+      font-size: 2rem;
+      color: rgb(73, 109, 185);
+    }
+
+    /* Estilos para los numeros del proceso de entrega para nuestros clientes */
+    .process-number {
+      font-size: 1.5rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    /* Estilos para los numeros del proceso de entrega para nuestros clientes - Animación */
+    .process-number:hover {
+      transform: scale(1.1);
+    }

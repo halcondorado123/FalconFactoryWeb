@@ -1,15 +1,11 @@
-    // ===================================
-// INICIALIZACIÓN EMAILJS
-// ===================================
+// Inicialización de EmailJS
 (function () {
     emailjs.init("XPL-O6zFZdxbFvTw1"); // Reemplaza con tu public key de EmailJS
 })();
 
-// ===================================
-// FUNCIONES DE VALIDACIÓN
-// ===================================
+// Funciones de validación
 
-// Función para mostrar error debajo del campo
+// Función para mostrar error debajo del campo como advertencia en caso que se ingrese un dato incorrecto
 function showError(input, message) {
     const errorDiv = input.parentElement.querySelector('.invalid-feedback');
     if (errorDiv) {
@@ -38,9 +34,7 @@ function isValidEmail(email) {
 const urlPattern = /(https?:\/\/[^\s]+)|(www\.[^\s]+)|([^\s]+\.(com|net|org|co|io|gov|edu))/gi;
 const htmlTagPattern = /<[^>]*>/g;
 
-// ===================================
-// MANEJO DEL FORMULARIO
-// ===================================
+// Evento al cargar la ventana y validacion de cada campo
 window.onload = function () {
     const contactForm = document.getElementById('contact-form');
 
@@ -58,21 +52,19 @@ window.onload = function () {
         }
     });
 
-    // ===================================
-    // EVENTO SUBMIT DEL FORMULARIO
-    // ===================================
+    // Evento al enviar el formulario
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
         event.stopPropagation();
 
         let hasError = false;
 
-        // Obtener valores
+        // Obtener valores y limpiar espacios en blanco
         const name = nameInput.value.trim();
         const email = emailInput.value.trim();
         const message = messageField.value.trim();
 
-        // Limpiar errores previos
+        // Limpiar errores previos antes de nueva validación
         clearError(nameInput);
         clearError(emailInput);
         clearError(messageField);
@@ -116,7 +108,7 @@ window.onload = function () {
             return;
         }
 
-        // Deshabilitar botón y mostrar spinner
+        // Deshabilitar botón y mostrar spinner(Estado de carga de la informacion)
         const spinner = submitButton.querySelector('.spinner-border');
         const buttonText = submitButton.querySelector('.button-text');
 
@@ -124,16 +116,15 @@ window.onload = function () {
         if (buttonText) buttonText.textContent = 'Enviando...';
         submitButton.disabled = true;
 
-        // ===================================
-        // ENVIAR EMAIL CON EMAILJS
-        // ===================================
-        emailjs.sendForm('service_ag17agh', 'template_82d7idm', this) // Reemplaza con tu Service ID y Template ID
+
+        // Enviar el formulario usando EmailJS
+        emailjs.sendForm('service_ag17agh', 'template_82d7idm', this) // En esta linea se define el servicio y la plantilla a utilizar
             .then(() => {
-                // Éxito
+                // Si el envío es exitoso
                 Swal.fire({
                     icon: 'success',
                     title: '¡Mensaje enviado!',
-                    text: 'Gracias por tu mensaje. Lo he recibido y me comunicaré contigo a la mayor brevedad.',
+                    text: 'Gracias por contactarnos. Nos comunicaremos a la mayor brevedad posible.',
                     confirmButtonText: 'Cerrar',
                     confirmButtonColor: '#198754'
                 }).then(() => {
@@ -142,7 +133,7 @@ window.onload = function () {
                 });
             })
             .catch((error) => {
-                // Error
+                // Control de errores en caso de fallo en el envio
                 console.error('Error al enviar:', error);
                 Swal.fire({
                     icon: 'error',
@@ -160,9 +151,7 @@ window.onload = function () {
             });
     });
 
-    // ===================================
-    // VALIDACIÓN DE BOOTSTRAP
-    // ===================================
+    // Validación de Bootstrap al enviar el formulario
     (function () {
         'use strict';
 

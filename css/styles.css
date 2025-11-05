@@ -1,302 +1,155 @@
-/* ===========================
-   VARIABLES Y CONFIGURACIÓN
-   =========================== */
-:root {
-  --primary-color: #0d6efd;
-  --primary-dark: #0a58ca;
-  --secondary-color: #6c757d;
-  --dark-color: #212529;
-  --light-color: #f8f9fa;
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-dark: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
-  --transition: all 0.3s ease;
-}
+   /*Sección de imagen principal */
+    .hero-image-container {
+      position: relative;
+      animation: float 3s ease-in-out infinite;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    /* Configuración de la imagen */
+    .hero-image {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--dark-color);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+    /* Configuración de los iconos del descriptivo de los servicios */
+    .feature-icon-box {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
 
-/* ===========================
-   HERO SECTION
-   =========================== */
-.hero-section {
-  min-height: 90vh;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  position: relative;
-  overflow: hidden;
-  margin-top: 5px;
-}
+    /* Contenedor azul de experiencia*/
+    .stats-section {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      position: relative;
+      overflow: hidden;
+    }
 
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
-  pointer-events: none;
-}
+    /* Cuadros dentro del contenedor de experiencia */
+    .stat-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-.overlay-light {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
-}
+    /* Configuración de los cuadros al asomar el puntero - Animación */
+    .stat-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.25);
+    }
 
-.hero-container {
-  position: relative;
-  z-index: 1;
-}
+    /* Formato de los numeros dentro de los cuadros */
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      line-height: 1;
+    }
 
-.min-vh-90 {
-  min-height: 90vh;
-}
+    /* Contenedor de los servicios ofertados */
+    .service-preview-card {
+      border: none;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      height: 100%;
+      overflow: hidden;
+    }
 
-/* Texto Hero */
-.text-gradient-dark {
-  background: var(--gradient-dark);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+    /* Contenedor de los servicios ofertados - Animación */
+    .service-preview-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
 
-.hero-text h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-}
+    /* Cuadritos de los iconos */
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: #e7f1ff;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      transition: all 0.3s ease;
+    }
 
-.hero-text h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-}
+        /* Cuadritos de los iconos - Cambia el contededor del icono - Animación */  */
+    .service-preview-card:hover .service-icon {
+      background: #0d6efd;
+      transform: scale(1.1);
+    }
+/* Cuadritos de los iconos - Cambia icono dentro del contenedor - Animación */  */
+    .service-preview-card:hover .service-icon i {
+      color: white !important;
+    }
 
-.hero-text .lead {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  max-width: 600px;
-}
+    /* Le brinda formato a los iconos del carrusel */
+    .client-logo {
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: all 0.3s ease;
+      max-width: 150px;
+      height: auto;
+    }
 
-/* Animaciones */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    /* Le brinda formato de animacion al asomar el puntero en cada icono de nuestros clientes */
+    .client-logo:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.1);
+    }
 
-.animate-fade-in {
-  animation: fadeIn 1s ease-out;
-}
+    /* Contenedor de ¿Listo para transformar tu idea en realidad? */
+    .cta-section {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      position: relative;
+      overflow: hidden;
+    }
 
-/* Botones */
-.btn {
-  border-radius: 50px;
-  padding: 12px 30px;
-  font-weight: 600;
-  transition: var(--transition);
-  text-decoration: none;
-  display: inline-block;
-}
+    /* Boton de solicitar cotización */
+    .btn-custom {
+      border-radius: 50px;
+      padding: 12px 32px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
 
-.btn-primary {
-  background: var(--gradient-primary);
-  border: none;
-  color: white;
-}
+    /* Boton de solicitar cotización - Animación */
+    .btn-custom:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
 
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-}
+    /* Tarjetas de los testimonios de nuestros clientes */
+    .testimonial-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
 
-.btn-outline-dark {
-  border: 2px solid var(--dark-color);
-  color: var(--dark-color);
-  background: transparent;
-}
+    /* Tarjetas de los testimonios de nuestros clientes */
+    .testimonial-card
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
 
-.btn-outline-dark:hover {
-  background: var(--dark-color);
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
-}
-
-.hover-scale:hover {
-  transform: translateY(-3px) scale(1.05);
-}
-
-.hover-glow:hover {
-  box-shadow: 0 0 20px rgba(33, 37, 41, 0.3);
-}
-
-/* Visual Container */
-.hero-visual-container {
-  padding: 2rem;
-}
-
-.main-icon {
-  position: relative;
-  display: inline-block;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.icon-glow-dark {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(13, 110, 253, 0.2) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 0.8;
-  }
-}
-
-/* Tech Badges */
-.tech-badge {
-  padding: 1rem;
-  background: white;
-  border-radius: 15px;
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
-  display: inline-block;
-}
-
-.tech-badge:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
-/* ===========================
-   CLIENTS SECTION
-   =========================== */
-.client-logo {
-  filter: grayscale(100%);
-  opacity: 0.6;
-  transition: var(--transition);
-  width: 250px;
-  height: 250px;
-}
-
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-}
-
-/* ===========================
-   CTA SECTION
-   =========================== */
-.bg-primary {
-  background: var(--gradient-primary) !important;
-}
-
-/* ===========================
-   RESPONSIVE
-   =========================== */
-@media (max-width: 991px) {
-  .hero-text {
-    text-align: center;
-    padding: 0 1rem;
-  }
-  
-  .hero-text .d-flex {
-    justify-content: center !important;
-  }
-  
-  .hero-visual-container {
-    margin-top: 3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    min-height: auto;
-    padding: 3rem 0;
-  }
-  
-  .main-icon i {
-    font-size: 8rem !important;
-  }
-  
-  .tech-badge {
-    padding: 0.75rem;
-  }
-  
-  .tech-badge i {
-    font-size: 1.5rem !important;
-  }
-}
-
-/* ===========================
-   UTILIDADES
-   =========================== */
-.shadow-lg {
-  box-shadow: var(--shadow-lg) !important;
-}
-
-.text-dark {
-  color: var(--dark-color) !important;
-}
-
-.opacity-85 {
-  opacity: 0.85;
-}
-
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Focus Visible */
-*:focus-visible {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 3px;
-}
-/* Badge Styles */
+    /* Comillas de decoración de las tarjetas de los testimonios */
+    .quote-icon {
+      font-size: 3rem;
+      color: #0d6efd;
+      opacity: 0.2;
+    }
