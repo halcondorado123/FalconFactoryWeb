@@ -707,7 +707,6 @@ in the Software without restriction...
 
 Si este proyecto te fue útil, considera:
 
-[![Star on GitHub](https://img.shields.io/github/stars/halcondorado123/falcon-factory-web?style=social)](https://github.com/halcondorado123/falcon-factory-web)
 [![Follow](https://img.shields.io/github/followers/halcondorado123?style=social)](https://github.com/halcondorado123)
 
 ---
