@@ -724,5 +724,3 @@ Si este proyecto te fue útil, considera:
 *"La mejor manera de predecir el futuro es crearlo"*
 
 ---
-
-### 📊 Estadísticas del Proyecto
