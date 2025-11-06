@@ -4,19 +4,17 @@
 
 ### *Transformando ideas en experiencias digitales impactantes*
 
-[![Firebase](https://img.shields.io/badge/Firebase-Hosting-orange?style=for-the-badge&logo=firebase)]([https://firebase.google.com/](https://falcon-factorysoftware.web.app/index.html))
+[![Firebase](https://img.shields.io/badge/Firebase-Hosting-orange?style=for-the-badge&logo=firebase)](https://firebase.google.com/?hl=es-419)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-purple?style=for-the-badge&logo=bootstrap)](https://getbootstrap.com/)
-[![EmailJS](https://img.shields.io/badge/EmailJS-Integration-blue?style=for-the-badge&logo=gmail)](https://www.emailjs.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![EmailJS](https://img.shields.io/badge/EmailJS-Integration-blue?style=for-the-badge&logo=gmail)](https://dashboard.emailjs.com/sign-in)
+
 
 ---
 
 ### 🔗 Enlaces Importantes
 
-[![🌐 Sitio Web](https://img.shields.io/badge/🌐_Sitio_Web-Visitar-blue?style=for-the-badge)](TU_URL_AQUI)
-[![📁 Google Drive](https://img.shields.io/badge/📁_Recursos-Google_Drive-yellow?style=for-the-badge&logo=googledrive)](TU_DRIVE_AQUI)
-[![📸 Capturas](https://img.shields.io/badge/📸_Screenshots-Ver_Capturas-green?style=for-the-badge&logo=googledrive)](TU_DRIVE_CAPTURAS_AQUI)
-[![📄 Documentación](https://img.shields.io/badge/📄_Docs-Ver_Documentos-red?style=for-the-badge&logo=googledrive)](TU_DRIVE_DOCS_AQUI)
+[![🌐 Sitio Web](https://img.shields.io/badge/🌐_Sitio_Web-Visitar-blue?style=for-the-badge)](https://falcon-factorysoftware.web.app/index.html)
+[![📁 Google Drive](https://img.shields.io/badge/📁_Recursos-Google_Drive-yellow?style=for-the-badge&logo=googledrive)](https://drive.google.com/drive/folders/1XRjSFOqITZ41iaaBTP0WzKS6_G8Omk3R?usp=sharing)
 
 </div>
 
@@ -27,8 +25,7 @@
 ### ✨ Highlights
 
 ```
-🎨 Diseño Moderno y Atractivo    📱 100% Responsivo y Mobile-First
-⚡ Carga Ultra Rápida             🔒 Seguro y Confiable
+🎨 Diseño Moderno y Atractivo    📱 100% Responsivo y Mobile-First         🔒 Seguro y Confiable
 📧 Formulario de Contacto Real    🎭 Componentes Modulares
 🚀 Desplegado en Firebase         ✅ Validación en Tiempo Real
 ```
@@ -69,8 +66,6 @@
 
 ### ⚡ Rendimiento
 - ✅ **Carga Rápida** - < 2 segundos tiempo de carga
-- ✅ **Lazy Loading** - Imágenes optimizadas
-- ✅ **CDN Integration** - Recursos desde CDN
 - ✅ **Cache Optimizado** - Configuración Firebase
 
 </td>
@@ -89,8 +84,6 @@
 
 ### 🔒 Seguridad
 - ✅ **HTTPS Automático** - Vía Firebase Hosting
-- ✅ **Sanitización de Inputs** - Protección XSS
-- ✅ **Validación Dual** - Cliente y servidor
 - ✅ **Protección Anti-spam** - EmailJS configurado
 
 </td>
@@ -308,31 +301,6 @@ firebase hosting:channel:deploy preview-channel
 
 ---
 
-## 🎨 Personalización
-
-### Cambiar Colores del Tema
-
-Edita `css/styles.css` y modifica las variables CSS:
-
-```css
-:root {
-  /* Colores Principales */
-  --primary-color: #0d6efd;      /* Azul principal */
-  --secondary-color: #6c757d;    /* Gris secundario */
-  --success-color: #198754;      /* Verde éxito */
-  --danger-color: #dc3545;       /* Rojo peligro */
-  --warning-color: #ffc107;      /* Amarillo advertencia */
-  --info-color: #0dcaf0;         /* Cyan información */
-  
-  /* Colores de Texto */
-  --text-dark: #212529;
-  --text-muted: #6c757d;
-  
-  /* Fondos */
-  --bg-light: #f8f9fa;
-  --bg-dark: #212529;
-}
-```
 
 ### Personalizar Contenido
 
@@ -393,15 +361,11 @@ En tu EmailJS dashboard, crea un template con este formato:
 Puedes configurar un email de respuesta automática:
 
 ```html
-<h2>¡Gracias por contactarnos, {{user_name}}!</h2>
+<h2>{{user_name}}!</h2>
 
-<p>Hemos recibido tu mensaje y te responderemos pronto.</p>
+<p>{{Email}}p>
 
-<p>Tu mensaje:</p>
 <blockquote>{{message}}</blockquote>
-
-<p>Saludos,<br>
-<strong>Falcon Software Factory®</strong></p>
 ```
 
 ---
@@ -583,38 +547,8 @@ El sitio está optimizado para todos los dispositivos:
 | 💻 **Desktop** | > 1024px | Layout completo, múltiples columnas |
 | 🖥️ **Large Desktop** | > 1440px | Contenido centrado, max-width |
 
-### Media Queries Personalizadas
-
-```css
-/* Extra small devices */
-@media (max-width: 575.98px) { }
-
-/* Small devices (landscape phones) */
-@media (min-width: 576px) and (max-width: 767.98px) { }
-
-/* Medium devices (tablets) */
-@media (min-width: 768px) and (max-width: 991.98px) { }
-
-/* Large devices (desktops) */
-@media (min-width: 992px) and (max-width: 1199.98px) { }
-
-/* Extra large devices */
-@media (min-width: 1200px) { }
-```
-
----
 
 ## ⚡ Performance
-
-### Métricas de Rendimiento
-
-| Métrica | Objetivo | Actual |
-|---------|----------|---------|
-| **First Contentful Paint** | < 1.8s | ✅ ~1.5s |
-| **Time to Interactive** | < 3.8s | ✅ ~3.2s |
-| **Speed Index** | < 3.4s | ✅ ~2.9s |
-| **Total Blocking Time** | < 200ms | ✅ ~150ms |
-| **Cumulative Layout Shift** | < 0.1 | ✅ ~0.05 |
 
 ### Optimizaciones Implementadas
 
@@ -628,69 +562,6 @@ El sitio está optimizado para todos los dispositivos:
 ✅ Fonts preloading
 ✅ DNS prefetch para CDN
 ```
-
-### Tips de Optimización Adicionales
-
-```html
-<!-- Preconnect a CDNs críticos -->
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<!-- Preload de recursos críticos -->
-<link rel="preload" href="css/styles.css" as="style">
-<link rel="preload" href="script/main.js" as="script">
-
-<!-- Lazy loading de imágenes -->
-<img src="imagen.jpg" loading="lazy" alt="Descripción">
-```
-
----
-
-## 🔒 Seguridad
-
-### Medidas de Seguridad Implementadas
-
-| Característica | Implementación | Estado |
-|----------------|----------------|--------|
-| **HTTPS** | Firebase Hosting (auto) | ✅ |
-| **Sanitización** | DOMPurify / Validación | ✅ |
-| **CORS** | Firebase configurado | ✅ |
-| **Rate Limiting** | EmailJS (100/hour) | ✅ |
-| **Validación Dual** | Cliente + Servidor | ✅ |
-| **Headers Seguridad** | Firebase headers | ✅ |
-
-### Content Security Policy (CSP)
-
-Agrega en `firebase.json`:
-
-```json
-{
-  "hosting": {
-    "headers": [{
-      "source": "**",
-      "headers": [{
-        "key": "Content-Security-Policy",
-        "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdn.emailjs.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;"
-      }]
-    }]
-  }
-}
-```
-
-### Protección Anti-Spam
-
-```javascript
-// En contact.js - Implementar honeypot
-<input type="text" name="honeypot" style="display:none">
-
-// JavaScript
-if (form.honeypot.value) {
-  // Bot detectado, no enviar
-  return false;
-}
-```
-
----
 
 ## 🤝 Contribuir
 
@@ -759,7 +630,7 @@ Usa los **Issues** de GitHub con el siguiente formato:
 
 ## 📄 Licencia
 
-Este proyecto está bajo la **Licencia MIT**. Ver el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la **Licencia MIT**.
 
 ```
 MIT License
@@ -782,7 +653,6 @@ in the Software without restriction...
 *Construimos el futuro digital*
 
 [![Email](https://img.shields.io/badge/Email-falconfelipedeveloper@gmail.com-red?style=for-the-badge&logo=gmail)](mailto:falconfelipedeveloper@gmail.com)
-[![Location](https://img.shields.io/badge/Ubicación-Bogotá_D.C.,_Colombia-green?style=for-the-badge&logo=googlemaps)](https://maps.google.com)
 [![Schedule](https://img.shields.io/badge/Horario-Lun--Vie_8:00--17:00-blue?style=for-the-badge&logo=clock)](/)
 
 </div>
@@ -819,11 +689,11 @@ in the Software without restriction...
 [![Phone](https://img.shields.io/badge/-+57_315_767_3005-green?style=flat&logo=whatsapp)](tel:+573157673005)
 
 **Especialidades:**
-- 🟢 Node.js & Python
-- 🐘 PostgreSQL
+- 🟢 Node.js & C#
+- 🐘 SQL Server
 - ☁️ AWS Cloud
 - 🔒 Ciberseguridad
-- 🏗️ Terraform
+- 🏗️ HTML, CSS, JavaScript
 
 </td>
 </tr>
@@ -846,7 +716,7 @@ Si este proyecto te fue útil, considera:
 
 **¡Contáctanos!** Transformamos tus ideas en experiencias digitales impactantes.
 
-[📧 Solicitar Cotización](mailto:falconfelipedeveloper@gmail.com) • [🌐 Visitar Sitio](#) • [📱 WhatsApp](https://wa.me/573209585852)
+[📧 Solicitar Cotización](mailto:falconfelipedeveloper@gmail.com) • [🌐 Visitar Sitio](https://falcon-factorysoftware.web.app/index.html) • [📱 WhatsApp](https://wa.me/573209585852)
 
 ---
 
@@ -857,6 +727,3 @@ Si este proyecto te fue útil, considera:
 ---
 
 ### 📊 Estadísticas del Proyecto
-
-![GitHub repo size](https://img.shields.io/github/repo-size/halcondorado123/falcon-factory-web?style=flat-square)
-![GitHub language count](https://img.shields.io/github/languages/count/halcondorado123/falcon-factory-
